@@ -27,7 +27,8 @@ const cartSlice = createSlice({
                 state.cartObj = []
             } else {
                 const delItemIndex = state.cartObj.findIndex(item => item.name === action.payload)
-                if (delItemIndex) {
+                console.log(delItemIndex)
+                if (delItemIndex > -1) {
                     state.cartObj.splice(delItemIndex, 1)
                 }
             }

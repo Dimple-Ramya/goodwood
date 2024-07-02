@@ -15,6 +15,9 @@ const Cart = () => {
 
     useEffect(() => {
         calcSubtot()
+        if (items.length === 0){
+            setEmptyCart(true)
+        }
     }, [items])
 
     const handleAddItem = (itemCount, index) => {
@@ -46,7 +49,7 @@ const Cart = () => {
             return (
                 <div style={{ textAlign: "center", paddingTop: "15%" }}>
                     <h1>Your Cart is Empty</h1>
-                    <button><Link to="/product">Fill It</Link></button>
+                    <Link to="/product"><button className='fill-it-btn'>Fill It</button></Link>
                 </div>
             )
         }

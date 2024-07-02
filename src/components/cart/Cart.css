@@ -125,11 +125,29 @@ th {
     justify-content: space-between;
 }
 
+.fill-it-btn {
+    background-color: #ab7a5f;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fill-it-btn:hover {
+    color: #000;
+    background-color: #ecd4c8;
+}
+
 .del-btn {
     background-color: rgb(206, 17, 17);
     border: none;
     color: white;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .total-outer-box {
@@ -283,8 +301,8 @@ th {
         margin-left: 20%;
         margin-top: 3%;
     }
-    
-   
+
+
     .subtotal-head {
         font-size: 16px;
         color: black;
