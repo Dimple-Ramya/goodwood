@@ -1,0 +1,64 @@
+.sidebar-box {
+    /* border: 1px solid blue; */
+    width: 12%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 1%;
+}
+
+.active-item {
+    list-style-type: none;
+    font-size: 17px;
+    color: brown;
+    margin-top: 8%;
+}
+
+.company-dropdown {
+    border: none;
+    background-color: rgb(243, 243, 243);
+    padding: 5px;
+}
+
+.price-val {
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.comp-head {
+    margin-top: 20px;
+    margin-bottom: 8%;
+    padding-left: 0;
+    font-weight: 700;
+
+}
+
+.category-ul {
+    margin-top: 0px;
+    margin-bottom: 8%;
+    padding-left: 0;
+    font-weight: 700;
+}
+
+.category-list-items {
+    list-style-type: none;
+    font-size: 14px;
+    color: grey;
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+.clear-filters-btn {
+    background-color: #ab7a5f;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}

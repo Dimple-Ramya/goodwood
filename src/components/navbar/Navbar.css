@@ -1,0 +1,153 @@
+.navbar-outer {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* position: sticky; */
+}
+
+.logo {
+    width: 230px;
+    cursor: pointer;
+}
+
+.cart-btn {
+    width: 130px;
+    height: 40px;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-icon {
+    height: 20px;
+    width: 30px;
+}
+
+.cart-total {
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: goldenrod;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-li-items {
+    padding-bottom: 4px;
+}
+
+.nav-li-items:hover {
+    cursor: pointer;
+    border-bottom: 2px solid goldenrod;
+}
+
+.nav-buttons {
+    display: block;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.small-screen-nav-container {
+    display: none;
+}
+
+.nav-small-screen-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(250, 239, 226);
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.small-screen-open-button {
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: brown;
+}
+
+.small-screen-close-button {
+    background-color: rgb(250, 239, 226);
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: brown;
+}
+
+.nav-small-screen-list {
+    list-style: none;
+}
+
+.nav-small-li-items {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.nav-small-li-items:hover {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    color: brown;
+}
+
+@media screen and (max-width:800px) {
+    .nav-buttons {
+        display: none;
+    }
+
+    .nav-small-screen-buttons {
+        margin-left: 10%;
+    }
+
+    .small-cart-btn {
+        width: 130px;
+        height: 40px;
+        font-size: 20px;
+        background-color: rgb(250, 239, 226);
+        border: none;
+        cursor: pointer;
+    }
+
+    .cart-total {
+        padding: 4px;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: goldenrod;
+        color: white;
+    }
+
+    .small-cart-btn :hover {
+        font-size: 24px;
+    }
+
+    .small-screen-nav-container {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+}
