@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import "./Product.css"
 import Sidebar from './sidebar/Sidebar'
 import ProductDisplay from './productdisplay/ProductDisplay'
@@ -19,7 +18,7 @@ const Product = () => {
       try {
         const res = await fetch("https://www.course-api.com/react-store-products");
         const data = await res.json();
-        // console.log(data);
+        console.log(data);
         setProdList(data)
         setMaxPrice(Math.max(...data.map(item => item.price)))
         // setCategoryFilteredList(data)
@@ -66,27 +65,34 @@ const Product = () => {
   const applyFilters = () => {
     let newFilteredList = prodList
 
+    if (price !== maxPrice) {
+      console.log("price")
+      newFilteredList = (prodList.length !== 0) && prodList.filter((item) => {
+        return item.price <= price
+      })
+    }
+
     if (activeCate !== "all") {
+      console.log("Category")
       newFilteredList = (prodList.length !== 0) && prodList.filter((item) => {
         return item.category === activeCate
       })
+    } else if (activeCate === "all") {
+      setFinalFilteredList(prodList)
     }
 
     if (activeCompany !== "all") {
+      console.log("company")
       newFilteredList = (prodList.length !== 0) && prodList.filter((item) => {
         return item.company === activeCompany
       })
+    } else if (activeCompany === "all") {
+      setFinalFilteredList(prodList)
     }
 
-    // if (price !== maxPrice) {
-    //   newFilteredList = (prodList.length !== 0) && prodList.filter((item) => {
-    //     return item.price <= price
-    //   })
-    // }
-
-    // console.log(newFilteredList)
-
+    console.log(newFilteredList)
     setFinalFilteredList(newFilteredList)
+
   }
 
   // const priceRange = () => {

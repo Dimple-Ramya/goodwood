@@ -16,7 +16,7 @@ const ProductDisplay = ({ finalFilteredList }) => {
         finalFilteredList.length !== 0 && handleFilter("price-lowest")
     }, [finalFilteredList])
 
-    // console.log(finalFilteredList)
+    console.log(finalFilteredList)
 
     const handleFilter = (value) => {
         //  console.log(value)

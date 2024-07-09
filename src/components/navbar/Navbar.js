@@ -40,13 +40,13 @@ const Navbar = () => {
                     <div className='nav-small-screen-overlay'>
                         <button className='small-screen-close-button' onClick={() => setOpenNav(false)}><MdClose /></button>
                         <ul className='nav-small-screen-list'>
-                            <li className='nav-small-li-items'><Link to="/">Home</Link></li>
-                            <li className='nav-small-li-items'><Link to="/about">About</Link></li>
-                            <li className='nav-small-li-items'><Link to="/product">Product</Link></li>
+                            <li className='nav-small-li-items' onClick={() => setOpenNav(false)}><Link to="/">Home</Link></li>
+                            <li className='nav-small-li-items' onClick={() => setOpenNav(false)}><Link to="/about">About</Link></li>
+                            <li className='nav-small-li-items' onClick={() => setOpenNav(false)}><Link to="/product">Product</Link></li>
                         </ul>
                         <div className='nav-small-screen-buttons'>
-                            <button className='small-cart-btn'><Link to="/cart">Cart < FaShoppingCart className='cart-icon' /><span className='cart-total'>{cartTot}</span></Link></button>
-                            <button className='small-cart-btn'>Login</button>
+                            <button className='small-cart-btn' onClick={() => setOpenNav(false)}><Link to="/cart">Cart < FaShoppingCart className='cart-icon' /><span className='cart-total'>{cartTot}</span></Link></button>
+                            <button className='small-cart-btn' >Login</button>
                         </div>
                     </div>
                 }
